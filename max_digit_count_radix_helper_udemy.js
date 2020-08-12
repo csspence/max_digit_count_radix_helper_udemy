@@ -11,6 +11,13 @@ const digitCount = (num) => {
   return num.toString().length;
 }
 
-const maxDigitCount = (num) => {
+const maxDigitCount = (nums) => {
+  let max = 0;
+  for(let i = 0; i < nums.length; i++) {
+    if(digitCount(nums[i]) > max) {
+      max = digitCount(nums[i]);
+    }
+  }
 
+  return max;
 }
